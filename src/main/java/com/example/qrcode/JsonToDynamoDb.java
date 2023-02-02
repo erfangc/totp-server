@@ -43,7 +43,14 @@ public class JsonToDynamoDb {
 
     public static void main(String[] args) throws JsonProcessingException {
         Map<String, AttributeValue> item = convert("""
-                { "name": "Dude", "score": 0.2, "active": true, "other": null, "hobbies": [{"name": "reading"}, {"name": "food"}]}
+                { 
+                "name": "Dude", 
+                "score": 0.2, 
+                "active": true,
+                 "other": null,
+                  "hobbies": [
+                  {"name": "reading"}, {"name": "food"}
+                 ]}
                 """);
         System.out.println(item);
     }
